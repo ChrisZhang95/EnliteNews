@@ -1,20 +1,28 @@
-import React from 'react';
-import Logo from '../logo/logo.component';
-import './header.scss';
-import SearchBar from '../searchBar/searchBar.component';
+import React from "react";
+import Logo from "../logo/logo.component";
+import "./header.scss";
+import SearchBar from "../searchBar/searchBar.component";
+import TopicMenu from "../topicMenu/topicMenu.component";
 
 const Header = () => (
-  <div className='header'>
-    <div className='logo'>
-      <Logo />
+  <div className="header">
+    <div className="row1">
+      <div className="column1">
+        <Logo />
+      </div>
+      <div className="column2">
+        <SearchBar />
+      </div>
+      <div className="column3">
+        <div>
+          <ul>
+            <li>Sign In</li>
+            <li>Sign Up</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <SearchBar />
-    <div>
-      <ul className='header-menu'>
-        <li>Sign In</li>
-        <li>Sign Up</li>
-      </ul>
-    </div>
+    <TopicMenu />
   </div>
 );
 

@@ -1,10 +1,19 @@
-import React from 'react';
-import './searchBar.scss';
+import React from "react";
+import "./searchBar.scss";
 
 const SearchBar = () => (
   <div className="searchBar">
-    <i className="fas fa-search"></i>
-    <div className='searchSpace'></div>
+    <div className="logoIcon grow">
+      <i className="fas fa-search"></i>
+    </div>
+    <form className="searchSpace">
+      <input
+        className="input"
+        type="text"
+        placeholder="Search news, articles & sources"
+        aria-label="Search"
+      />
+    </form>
   </div>
 );
 
