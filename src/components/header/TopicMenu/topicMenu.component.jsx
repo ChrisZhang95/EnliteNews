@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const categories = [
   "general",
   "business",
@@ -22,28 +22,17 @@ const colors = [
 
 const TopicMenu = () => {
   return (
-    <section className="bg-white bb b--light-gray">
+    <section>
       {categories.map((category, i) => {
-        if (category === "general")
-          return (
-            <a
-              key={i}
-              className={`grow f5 link b no-underline black dib ph2 pv2 ${colors[i]}`}
-              href={`/`}
-            >
-              {category}
-            </a>
-          );
-        else
-          return (
-            <a
-              key={i}
-              className={`grow f5 link b no-underline black dib ph2 pv2 ${colors[i]}`}
-              href={`/${category}`}
-            >
-              {category}
-            </a>
-          );
+        return (
+          <Link
+            key={i}
+            className={`grow f5 link b no-underline black dib pa2 outline-0 ${colors[i]}`}
+            to={`/${category}`}
+          >
+            {category}
+          </Link>
+        );
       })}
     </section>
   );
