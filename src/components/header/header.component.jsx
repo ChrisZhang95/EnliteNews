@@ -14,12 +14,10 @@ const Header = () => (
         <SearchBar />
       </div>
       <div className="column3">
-        <div>
-          <ul>
-            <li>Sign In</li>
-            <li>Sign Up</li>
-          </ul>
-        </div>
+        <ul>
+          <li>Sign In</li>
+          <li>Sign Up</li>
+        </ul>
       </div>
     </div>
     <TopicMenu />
