@@ -1,33 +1,8 @@
-// .header {
-//   width: 100%;
-//   height: 5.5rem;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-between;
-//   align-items: center;
-//   border-bottom: 1px lightgray solid;
-
-//   .logo {
-//     margin-left: 3rem;
-//   }
-
-//   .header-menu {
-//     list-style-type: none;
-//     display: flex;
-//     justify-content: row;
-//     margin-right: 3rem;
-//   }
-
-//   .header-menu li {
-//     margin: 10px;
-//   }
-// }
-
 .header {
   width: 100%;
-  height: 5.5rem;
-  display: flex;
+  display: flex-wrap;
   flex-direction: column;
+  margin-top: 20px;
 
   .row1 {
     display: flex;
@@ -37,6 +12,10 @@
     .column1 {
       width: 33%;
       margin-left: 3rem;
+
+      a {
+        text-decoration: none;
+      }
     }
 
     .column2 {
@@ -51,14 +30,8 @@
       justify-content: flex-end;
       margin-right: 3rem;
 
-      ul {
-        list-style-type: none;
-        display: flex;
-        flex-direction: row;
-      }
-
-      ul li {
-        margin: 10px;
+      a {
+        margin: 15px;
       }
     }
   }

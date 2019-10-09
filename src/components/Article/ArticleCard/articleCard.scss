@@ -1,0 +1,21 @@
+.articleCard {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid lightgray;
+  border-radius: 15px;
+  padding: 0px 30px;
+  margin: 15px;
+  text-align: left;
+
+  .left {
+    width: 70%;
+    display: inline-block;
+  }
+
+  .right {
+    width: 30%;
+    border-radius: 12px;
+    display: inline-block;
+  }
+}
