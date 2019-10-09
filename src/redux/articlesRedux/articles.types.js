@@ -1,3 +1,4 @@
 export const ArticleActionTypes = {
   UPDATE_ARTICLE_LIST: 'UPDATE_ARTICLE_LIST',
+  SELECT_ARTICLE: 'SELECT_ARTICLE'
 }

@@ -1,7 +1,8 @@
 import { ArticleActionTypes } from "./articles.types";
 
 const INITIAL_STATE = {
-  articleList: ''
+  articleList: '',
+  article: ''
 }
 
 const articleReducer = (state = INITIAL_STATE, action) => {
@@ -10,6 +11,11 @@ const articleReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         articleList: action.articleList
+      }
+    case ArticleActionTypes.SELECT_ARTICLE:
+      return {
+        ...state,
+        article: action.article
       }
 
     default:

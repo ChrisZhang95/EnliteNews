@@ -1,10 +1,12 @@
 import React from "react";
 import "./articleCard.scss";
+import { connect } from "react-redux";
+import { selectArticle } from "../../../redux/articlesRedux/articles.action";
 
-const ArticleCard = ({ article }) => (
+const ArticleCard = ({ article, selectArticle }) => (
   <article className="articleCard">
     <div className="left">
-      <h2>{article.title}</h2>
+      <h2 onClick={() => selectArticle(article)}>{article.title}</h2>
       <a
         className="dib"
         href="http://cbc.ca"
@@ -22,7 +24,14 @@ const ArticleCard = ({ article }) => (
   </article>
 );
 
-export default ArticleCard;
+const mapDispatchToProps = dispatch => ({
+  selectArticle: article => dispatch(selectArticle(article))
+});
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(ArticleCard);
 
 const timeDifference = (current, previous) => {
   var msPerMinute = 60 * 1000;
