@@ -21,7 +21,6 @@ app.get('/', (req, res) => {
 
 app.post('/news', (req, res) => {
   var { category } = req.body;
-  console.log(req.body);
   if (category === '') category = 'general';
   newsapi.v2.topHeadlines({
     category: category,

@@ -18,7 +18,7 @@ class ArticleList extends React.Component {
   render() {
     const { articleList } = this.props;
     return (
-      <div className="w-40 mh3">
+      <div className="mh3 articleList">
         {articleList === "" ? (
           <div className="loader center mt3"></div>
         ) : (

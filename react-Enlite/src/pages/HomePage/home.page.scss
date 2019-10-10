@@ -1,0 +1,12 @@
+.homePage {
+  display: flex;
+  width: 100%;
+
+  .homePage-left {
+    width: 40%;
+  }
+
+  .homePage-right {
+    width: 60%;
+  }
+}

@@ -4,12 +4,14 @@ import { connect } from "react-redux";
 import { selectArticle } from "../../../redux/articlesRedux/articles.action";
 
 const ArticleCard = ({ article, selectArticle }) => (
-  <article className="articleCard">
-    <div className="left">
-      <h2 onClick={() => selectArticle(article)}>{article.title}</h2>
+  <article className="articleCard ba b--black-10">
+    <div className="article-info">
+      <h3 className="article-title" onClick={() => selectArticle(article)}>
+        {article.title}
+      </h3>
       <a
         className="dib"
-        href="http://cbc.ca"
+        href={article.url}
         target="_blank"
         rel="noopener noreferrer"
         style={{ textDecoration: "underline", color: "blue" }}
@@ -20,7 +22,7 @@ const ArticleCard = ({ article, selectArticle }) => (
         {timeDifference(new Date(), new Date(article.publishedAt))}
       </p>
     </div>
-    <img className="right" alt="img" src={article.urlToImage}></img>
+    <img className="article-img" alt="img" src={article.urlToImage}></img>
   </article>
 );
 
