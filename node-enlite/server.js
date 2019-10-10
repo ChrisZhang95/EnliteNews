@@ -42,6 +42,7 @@ app.post('/signin', (req, res) => {
 
 })
 // process.env.PORT || 
+const port = process.env.port || 8000;
 app.listen(process.env.PORT || 8000, () => {
-  console.log(`app is runnning on port ${process.env.PORT}`);
+  console.log(`app is runnning on port ${port}`);
 });
