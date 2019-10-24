@@ -4,7 +4,8 @@ import Header from "./components/Header/header.component";
 
 import { Route, Switch } from 'react-router-dom';
 import HomePage from './pages/HomePage/home.page';
-import AuthenticationPage from './pages/AuthenticationPage/authentication.page'
+import AuthenticationPage from './pages/AuthenticationPage/signin.page'
+
 function App() {
   return (
     <div className="App">

@@ -3,7 +3,7 @@ import ArticleCard from "../ArticleCard/articleCard.component";
 import { BACKEND_URL } from "../../../constants";
 
 import { connect } from "react-redux";
-import { updateArticleList } from "../../../redux/articlesRedux/articles.action";
+import { updateArticleList, selectArticle } from "../../../redux/articlesRedux/articles.action";
 
 class ArticleList extends React.Component {
   state = {
@@ -41,7 +41,7 @@ class ArticleList extends React.Component {
       .then(response => response.json())
       .then(res => {
         this.props.updateArticleList(res.articles);
-        // this.setState({ articles: res.articles, article: res.articles[0] });
+        this.props.selectArticle(res.articles[0]);
       });
   };
 }
@@ -51,7 +51,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispath => ({
-  updateArticleList: articleList => dispath(updateArticleList(articleList))
+  updateArticleList: articleList => dispath(updateArticleList(articleList)),
+  selectArticle: article => dispath(selectArticle(article))
 });
 
 export default connect(

@@ -5,7 +5,7 @@ import SearchBar from "./SearchBar/searchBar.component";
 import TopicMenu from "./TopicMenu/topicMenu.component";
 import { Link } from "react-router-dom";
 const Header = () => (
-  <div className="header">
+  <div className="header bb b--black-10 bg-white">
     <div className="row1">
       <div className="column1">
         <Link to="/">

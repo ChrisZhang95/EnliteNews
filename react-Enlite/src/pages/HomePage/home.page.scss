@@ -1,6 +1,8 @@
 .homePage {
   display: flex;
   width: 100%;
+  position: relative;
+  top: 106px;
 
   .homePage-left {
     width: 40%;
