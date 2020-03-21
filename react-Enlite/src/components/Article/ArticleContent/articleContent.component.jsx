@@ -3,9 +3,9 @@ import "./articleContent.scss";
 
 import { connect } from "react-redux";
 
-const ArticleContent = ({ article }) => (
+const ArticleContent = ({ article }) => {
+  return (
   <div className="fr w-100  ph0-l mv3">
-    {console.log(article.source)}
     <article className="fixed pv4 ph3 ba br3 b--black-10 ml3">
       <div className="flex flex-column flex-row-ns">
         <div className="w-100 w-60-ns pr3-ns order-2 order-1-ns">
@@ -15,8 +15,12 @@ const ArticleContent = ({ article }) => (
             href={article.url}
             target="_blank"
             rel="noopener noreferrer"
+<<<<<<< HEAD
           >
             {article.source.name}
+=======
+          >{article.name}
+>>>>>>> 289a66599963301ec3456392ee8486224f32f3dd
           </a>
           <div className="f5 f4-l lh-copy athelas">{article.description}</div>
         </div>
@@ -37,6 +41,7 @@ const ArticleContent = ({ article }) => (
     </article>
   </div>
 );
+}
 
 const mapStateToProps = state => ({
   article: state.articleReducer.article

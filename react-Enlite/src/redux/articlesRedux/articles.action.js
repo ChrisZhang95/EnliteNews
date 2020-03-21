@@ -7,5 +7,6 @@ export const updateArticleList = (articleList) => ({
 
 export const selectArticle = article => ({
   type: ArticleActionTypes.SELECT_ARTICLE,
-  article
+  article,
+  name: article.source.name
 })
