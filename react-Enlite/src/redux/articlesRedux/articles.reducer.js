@@ -15,7 +15,7 @@ const articleReducer = (state = INITIAL_STATE, action) => {
     case ArticleActionTypes.SELECT_ARTICLE:
       return {
         ...state,
-        article: action.article
+        article: { ...action.article }
       }
 
     default:

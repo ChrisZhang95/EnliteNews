@@ -16,7 +16,7 @@ const ArticleContent = ({ article }) => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            fds
+            {article.source.name}
           </a>
           <div className="f5 f4-l lh-copy athelas">{article.description}</div>
         </div>
